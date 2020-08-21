@@ -1,0 +1,55 @@
+{
+  "name": "poke-react",
+  "version": "0.1.0",
+  "private": false,
+  "homepage": "https://vichofs.github.io/poke-react/",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.17.1",
+    "gh-pages": "^3.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.10.0",
+    "react-scripts": "3.4.1"
+  },
+  "scripts": {
+    "webpack:server": "webpack --config webpack.server.js --watch",
+    "webpack:client": "webpack --config webpack.client.js --watch",
+    "webpack:start": "nodemon ./build/bundle_server.js",
+    "start": "npm-run-all --parallel webpack:*",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.2.1",
+    "file-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.10.0",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-node-externals": "^2.5.1"
+  }
+}
